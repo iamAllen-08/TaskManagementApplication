@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Task Dashboard</h1>
+    <button class="logout">Logout</button>
+  </header>
+
+  <section class="filters">
+    <h2>Filter Tasks</h2>
+    <label>Status:</label>
+    <select>
+      <option>All</option>
+      <option>Pending</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+    </select>
+
+    <label>Assignee:</label>
+    <select>
+      <option>All</option>
+      <option>Sarah</option>
+      <option>John</option>
+      <option>Mike</option>
+    </select>
+
+    <button class="apply">Apply Filters</button>
+  </section>
+
+  <section class="task-list">
+    <h2>Filtered Tasks</h2>
+    <div class="task-card">
+      <h3>Task A</h3>
+      <p>Assignee: Sarah</p>
+      <p>Due: 05/18/2024</p>
+      <span class="status in-progress">In Progress</span>
+    </div>
+  </section>
+</body>
+</html>
