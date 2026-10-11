@@ -97,3 +97,22 @@ A simple and collaborative Task Management App designed to help teams create, as
 - **What didn’t go well:** Requirement clarity at start
 - **Improvements:** Better sprint planning, more detailed user stories
 
+## Test Cases
+
+| Test Case ID | Feature          | Steps                                                   | Expected Result                          | Status |
+|--------------|------------------|---------------------------------------------------------|------------------------------------------|--------|
+| TC01         | Login            | Enter valid email + password → click Login              | User is redirected to Dashboard           | Pass   |
+| TC02         | Login            | Enter invalid credentials → click Login                 | Error message “Invalid login”             | Pass   |
+| TC03         | Add Task         | Fill form (title, deadline, assignee) → click Save      | Task appears in task list                 | Pass   |
+| TC04         | Edit Task        | Select task → change title → Save                       | Updated task displayed                    | Pass   |
+| TC05         | Delete Task      | Select task → click Delete                              | Task removed from list                    | Pass   |
+| TC06         | Filter Tasks     | Select “In Progress” filter → Apply                     | Only tasks with status “In Progress” shown| Pass   |
+| TC07         | Persistent Storage | Refresh page after adding task                         | Task still exists (stored in DB/file)     | Pass   |
+
+##  Defect Log
+
+| Defect ID | Description                | Steps to Reproduce                          | Severity | Status |
+|-----------|----------------------------|---------------------------------------------|----------|--------|
+| D01       | Task not saving            | Add task → refresh → task disappears        | High     | Open   |
+| D02       | Filter not clearing        | Apply filter → click Clear Filters → tasks still filtered | Medium   | Open   |
+| D03       | Login button misaligned    | On mobile view, button overlaps input field | Low      | Open   |
